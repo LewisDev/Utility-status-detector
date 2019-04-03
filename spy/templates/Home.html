@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hostel Spy</title>
+	<meta charset="utf-8"/>
+	{% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/query.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">!!! HOSTEL SPY !!!</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{% url 'home' %}">Hostel Status</a></li>
+      <li><a href="{% url 'wash' %}">Washrooms</a></li>
+     </ul>
+  </div>
+
+</nav>
+	<div class="container-fluid text-center bg2">
+	<h3>HOSTEL STATUS</h3>
+	</div>
+	<br></
+	<div class="container-fluid">
+		<div class="row text-center">
+			<button class="btn btn-success" id="">Barber</button>
+			<button class="btn btn-danger">Office</button>
+			{% if x %}
+				<button class="btn btn-danger">Laundry</button>
+			{% else %}
+				<button class="btn btn-success">Laundry</button>
+			{% endif %}
+			<br><br>
+			<button class="btn btn-success">Tug Shop</button>
+			<button class="btn btn-danger">Gym</button>
+			<button class="btn btn-success">Mess</button>
+		</div>
+	</div>
+	<br><br>
+	<div class="text-center">
+		<a href="{% url 'home' %}">Get Current Status</a>
+	</div>
+
+</body>
+</html>
